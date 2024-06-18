@@ -11,7 +11,6 @@ import (
 	"github.com/gorilla/mux"
 )
 
-
 type Movie struct {
 	Id       string    `json:"id"`
 	Isbn     string    `json:"isbn"`
@@ -41,7 +40,6 @@ func deleteMovie(w http.ResponseWriter, r *http.Request) {
 			break
 		}
 	}
-
 	json.NewEncoder(w).Encode(movies)
 }
 
